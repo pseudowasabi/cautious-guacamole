@@ -1,9 +1,11 @@
 server:
-  port: 9001
+  port: 0
 spring:
   application:
     name: user-service
 eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}} # port: 0 case -> to identify each process on the eureka webpage
   client:
     register-with-eureka: true
     fetch-registry: true
