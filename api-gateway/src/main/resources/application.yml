@@ -9,14 +9,20 @@ eureka:
 spring:
   application:
     name: api-gateway
-#  cloud:
-#    gateway:
-#      routes:
-#        - id: first
-#          uri: http://localhost:8081
-#          predicates:
-#            - Path=/first-service/**
-#        - id: second
-#          uri: http://localhost:8082
-#          predicates:
-#            - Path=/second-service/**
+  cloud:
+    gateway:
+      routes:
+        - id: first
+          uri: http://localhost:8081
+          predicates:
+            - Path=/first-service/**
+          filters:
+            - AddRequestHeader=req1, req1-value
+            - AddResponseHeader=resp1, resp1-value
+        - id: second
+          uri: http://localhost:8082
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - AddRequestHeader=req2, req2-value
+            - AddResponseHeader=resp2, resp2-value
