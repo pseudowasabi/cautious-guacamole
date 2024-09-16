@@ -11,7 +11,7 @@
     <groupId>com.pseudowasabilabs</groupId>
     <artifactId>first-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>second-service</name>
+    <name>first-service</name>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
