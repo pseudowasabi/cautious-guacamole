@@ -33,6 +33,13 @@
             <version>1.18.28</version>
             <!-- by chatgpt: Lombok versions prior to 1.18.4 may not be fully compatible with JDK 9 and later. -->
         </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-resolver-dns-native-macos</artifactId>
+            <version>4.1.68.Final</version>
+            <classifier>osx-aarch_64</classifier>
+        </dependency>
+
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
