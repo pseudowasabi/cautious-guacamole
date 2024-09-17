@@ -17,12 +17,14 @@ spring:
           predicates:
             - Path=/first-service/**
           filters:
-            - AddRequestHeader=req1, req1-value
-            - AddResponseHeader=resp1, resp1-value
+#            - AddRequestHeader=req1, req1-value
+#            - AddResponseHeader=resp1, resp1-value
+            - CustomFilter
         - id: second
           uri: http://localhost:8082
           predicates:
             - Path=/second-service/**
           filters:
-            - AddRequestHeader=req2, req2-value
-            - AddResponseHeader=resp2, resp2-value
+#            - AddRequestHeader=req2, req2-value
+#            - AddResponseHeader=resp2, resp2-value
+            - CustomFilter

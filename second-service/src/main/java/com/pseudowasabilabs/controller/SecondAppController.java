@@ -25,4 +25,9 @@ public class SecondAppController {
         log.info(header);
         return "Second app test";
     }
+
+    @GetMapping("/check")
+    private String check() {
+        return "Hi, check";
+    }
 }

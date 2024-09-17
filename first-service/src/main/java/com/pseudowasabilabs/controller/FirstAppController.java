@@ -25,4 +25,9 @@ public class FirstAppController {
         log.info(header);
         return "First app test";
     }
+
+    @GetMapping("/check")
+    private String check() {
+        return "Hi, check";
+    }
 }
