@@ -11,6 +11,12 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: API gateway Global filter
+            preLogger: true
+            postLogger: true
       routes:
         - id: first
           uri: http://localhost:8081

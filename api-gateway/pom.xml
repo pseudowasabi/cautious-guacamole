@@ -29,8 +29,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
             <version>1.18.28</version>
+            <scope>provided</scope>
             <!-- by chatgpt: Lombok versions prior to 1.18.4 may not be fully compatible with JDK 9 and later. -->
         </dependency>
         <dependency>
