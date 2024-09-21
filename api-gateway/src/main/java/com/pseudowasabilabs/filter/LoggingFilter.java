@@ -39,14 +39,13 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
                     log.info("LoggingFilter POST filter - response code: {}", response.getStatusCode());
                 }
             }));
-        }, Ordered.HIGHEST_PRECEDENCE);
+        }, Ordered.LOWEST_PRECEDENCE);
 
         return filter;
     }
 
     @Data
     public static class Config {
-        // Put the configuration properties
         private String baseMessage;
         private boolean preLogger;
         private boolean postLogger;
