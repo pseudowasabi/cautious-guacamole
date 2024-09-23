@@ -19,7 +19,8 @@ spring:
             postLogger: true
       routes:
         - id: first
-          uri: http://localhost:8081
+          #uri: http://localhost:8081
+          uri: lb://FIRST-APP
           predicates:
             - Path=/first-service/**
           filters:
@@ -27,7 +28,8 @@ spring:
 #            - AddResponseHeader=resp1, resp1-value
             - CustomFilter
         - id: second
-          uri: http://localhost:8082
+          #uri: http://localhost:8082
+          uri: lb://SECOND-APP
           predicates:
             - Path=/second-service/**
           filters:
